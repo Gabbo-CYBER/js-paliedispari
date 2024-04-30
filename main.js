@@ -1,26 +1,20 @@
-function getRandomIntInclusive(min,max) {
-    min = Math.ceil (min);
-    max = Math.floor (max);
-    return Math.floor (Math.random() * (max - min + 1) + min)
+function palindroma(){
+    const word = prompt("Inserisci una parola");
+    console.log (word)
+    const chars = word.split ('')
+    console.log (chars)
+    const charsRev = chars.reverse()
+    console.log (charsRev)
+    const wordRev = charsRev.join('')
+    console.log (wordRev)
+
+    return word === wordRev
 }
 
-const scelta = prompt ('Pari o Dispari?')
-const numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'))
-const numeroPC = getRandomIntInclusive(1, 5)
-const somma = numeroUtente + numeroPC
-console.log (somma)
+let isPalindroma = palindroma ()
 
-function isEven(num) {
-    return num % 2 === 0 
-}
-
-function isOdd(num) {
-    return num % 2 === 1
-}
-
-if( (scelta === 'pari' && isEven(somma)) || (scelta === 'dispari' && isOdd(somma))) {
-    console.log ('hai vinto')
+if (isPalindroma === true) {
+    console.log ('Parola Palindroma')
 } else {
-    console.log ('hai perso')
+    console.log ('Parola non Palindroma')
 }
-    
