@@ -13,6 +13,7 @@ function palindroma(){
 
 let isPalindroma = palindroma ()
 
+
 if (isPalindroma === true) {
     console.log ('Parola Palindroma')
 } else {
